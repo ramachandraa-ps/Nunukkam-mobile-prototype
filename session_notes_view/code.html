@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mentorship Session Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7c3bed",
+              "background-light": "#f7f6f8",
+              "background-dark": "#171121",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/css">
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .strikethrough-on-check:checked + label p {
+            text-decoration: line-through;
+            color: #9ca3af; /* text-gray-400 */
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden text-[#131118] dark:text-gray-200">
+<!-- Top App Bar -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
+<div class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-[#131118] dark:text-gray-200">arrow_back</span>
+</div>
+<h1 class="text-[#131118] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Session Notes</h1>
+<div class="flex size-10 shrink-0 items-center"></div>
+</div>
+<main class="flex-grow px-4 py-6 space-y-6">
+<!-- Discussion Pointers Card -->
+<div class="bg-white dark:bg-gray-800/50 p-5 rounded-xl shadow-sm">
+<h2 class="text-[#131118] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Discussion Pointers</h2>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined text-primary">chat_bubble</span>
+</div>
+<p class="text-[#131118] dark:text-gray-300 text-base font-normal leading-normal flex-1 pt-2">Review of the last project's feedback</p>
+</li>
+<li class="flex items-start gap-3">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<p class="text-[#131118] dark:text-gray-300 text-base font-normal leading-normal flex-1 pt-2">Strategies for improving time management</p>
+</li>
+<li class="flex items-start gap-3">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<p class="text-[#131118] dark:text-gray-300 text-base font-normal leading-normal flex-1 pt-2">Planning career goals for the next quarter</p>
+</li>
+</ul>
+</div>
+<!-- Action Items Card -->
+<div class="bg-white dark:bg-gray-800/50 p-5 rounded-xl shadow-sm">
+<h2 class="text-[#131118] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Action Items</h2>
+<div class="space-y-4">
+<!-- Action Item 1 -->
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<input checked="" class="strikethrough-on-check peer mt-1.5 h-5 w-5 flex-shrink-0 rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-gray-400" id="action1" type="checkbox"/>
+<label class="flex-1" for="action1">
+<p class="text-[#131118] dark:text-gray-300 text-base font-normal leading-normal peer-checked:text-gray-400 peer-checked:line-through">Update portfolio with the latest project case study.</p>
+</label>
+</div>
+<div class="pl-8">
+<button class="inline-flex items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-sm font-semibold text-primary hover:bg-primary/20" type="button">
+<span class="material-symbols-outlined text-base">upload_file</span>
+                                Upload File
+                            </button>
+</div>
+</div>
+<!-- Action Item 2 -->
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<input class="strikethrough-on-check peer mt-1.5 h-5 w-5 flex-shrink-0 rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-gray-400" id="action2" type="checkbox"/>
+<label class="flex-1" for="action2">
+<p class="text-[#131118] dark:text-gray-300 text-base font-normal leading-normal">Research and shortlist three online courses on UX writing.</p>
+</label>
+</div>
+<div class="pl-8 flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-full bg-gray-100 dark:bg-gray-700 p-1.5 pr-3">
+<div class="flex size-6 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/50">
+<span class="material-symbols-outlined text-sm text-red-600 dark:text-red-400">picture_as_pdf</span>
+</div>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-200">Course_List.pdf</span>
+<button class="ml-1" type="button">
+<span class="material-symbols-outlined text-base text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-100">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action Item 3 -->
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<input class="strikethrough-on-check peer mt-1.5 h-5 w-5 flex-shrink-0 rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-gray-400" id="action3" type="checkbox"/>
+<label class="flex-1" for="action3">
+<p class="text-[#131118] dark:text-gray-300 text-base font-normal leading-normal">Schedule a follow-up meeting for next week.</p>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Card Example -->
+<div class="bg-white dark:bg-gray-800/50 p-5 rounded-xl shadow-sm">
+<h2 class="text-[#131118] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Additional Notes</h2>
+<div class="flex flex-col items-center justify-center py-8 text-center">
+<span class="material-symbols-outlined text-5xl text-gray-300 dark:text-gray-600">edit_note</span>
+<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">No additional notes were added.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation / Action Button -->
+<div class="sticky bottom-0 bg-white dark:bg-background-dark p-4 border-t border-gray-200 dark:border-gray-800">
+<button class="w-full rounded-lg bg-primary px-5 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Go Back</button>
+</div>
+</div>
+</body></html>

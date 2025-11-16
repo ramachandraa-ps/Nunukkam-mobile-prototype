@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nunukkam - Learning Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4A69FF",
+              "background-light": "#F9FAFB",
+              "background-dark": "#111827",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem",
+                "lg": "1rem",
+                "xl": "1.5rem",
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark text-[#2D3748] dark:text-gray-200">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200/80 bg-background-light/80 p-4 pb-3 dark:border-gray-700/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl text-[#2D3748] dark:text-gray-200">arrow_back</span>
+</div>
+<h1 class="flex-1 text-center text-lg font-bold">Learning Journey</h1>
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl text-[#2D3748] dark:text-gray-200">tune</span>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-grow pb-24">
+<div class="p-4 space-y-6">
+<!-- Overall Progress Card -->
+<div class="rounded-xl bg-white dark:bg-gray-800 p-6 shadow-sm">
+<p class="text-lg font-bold text-[#2D3748] dark:text-white mb-4">Overall Progress</p>
+<div class="relative mx-auto flex h-48 w-48 items-center justify-center">
+<svg class="h-full w-full progress-ring" viewbox="0 0 120 120">
+<circle class="stroke-gray-200 dark:stroke-gray-700" cx="60" cy="60" fill="transparent" r="52" stroke-width="12"></circle>
+<circle class="stroke-primary" cx="60" cy="60" fill="transparent" r="52" stroke-dasharray="326.72" stroke-dashoffset="98.016" stroke-linecap="round" stroke-width="12"></circle> <!-- 326.72 * (1 - 0.7) -->
+</svg>
+<div class="absolute flex flex-col items-center text-center">
+<span class="text-4xl font-extrabold text-[#2D3748] dark:text-white">70%</span>
+<span class="text-sm text-gray-500 dark:text-gray-400">Complete</span>
+</div>
+</div>
+<p class="mt-4 text-center text-base text-gray-600 dark:text-gray-300">12 chapters + 4 assessments completed</p>
+</div>
+<!-- Task Completion Card -->
+<div class="flex cursor-pointer items-center gap-4 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm transition-all hover:shadow-md">
+<div class="flex-grow">
+<p class="text-base font-bold text-[#2D3748] dark:text-white">Task Completion</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">15/20 tasks (75%) completed</p>
+<div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+<div class="h-2 rounded-full bg-primary" style="width: 75%"></div>
+</div>
+</div>
+<span class="material-symbols-outlined text-2xl text-gray-400">chevron_right</span>
+</div>
+<!-- Skills Accomplished Card -->
+<div class="rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="flex-1">
+<p class="text-lg font-bold text-[#2D3748] dark:text-white">You are 65% corporate ready</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Based on your completed skills</p>
+</div>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<div class="relative h-32 w-32 flex-shrink-0">
+<svg class="h-full w-full" viewbox="0 0 36 36">
+<circle class="dark:fill-gray-800" cx="18" cy="18" fill="#fff" r="15.915"></circle>
+<circle class="stroke-current text-orange-400" cx="18" cy="18" fill="transparent" r="15.915" stroke-dasharray="55 45" stroke-dashoffset="0" stroke-width="4"></circle>
+<circle class="stroke-current text-purple-500" cx="18" cy="18" fill="transparent" r="15.915" stroke-dasharray="30 70" stroke-dashoffset="-55" stroke-width="4"></circle>
+<circle class="stroke-current text-green-500" cx="18" cy="18" fill="transparent" r="15.915" stroke-dasharray="15 85" stroke-dashoffset="-85" stroke-width="4"></circle>
+</svg>
+</div>
+<div class="flex w-full flex-col gap-2">
+<div class="flex items-center gap-2 text-sm">
+<span class="block h-3 w-3 rounded-full bg-orange-400"></span>
+<span class="flex-grow text-gray-600 dark:text-gray-300">Expert</span>
+<span class="font-semibold text-[#2D3748] dark:text-white">55%</span>
+</div>
+<div class="flex items-center gap-2 text-sm">
+<span class="block h-3 w-3 rounded-full bg-purple-500"></span>
+<span class="flex-grow text-gray-600 dark:text-gray-300">Intermediate</span>
+<span class="font-semibold text-[#2D3748] dark:text-white">30%</span>
+</div>
+<div class="flex items-center gap-2 text-sm">
+<span class="block h-3 w-3 rounded-full bg-green-500"></span>
+<span class="flex-grow text-gray-600 dark:text-gray-300">Novice</span>
+<span class="font-semibold text-[#2D3748] dark:text-white">15%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Quick Links -->
+<div>
+<div class="flex items-center justify-between px-1 pb-3">
+<h3 class="text-lg font-bold text-[#2D3748] dark:text-white">This Week's Content</h3>
+<a class="text-sm font-semibold text-primary" href="#">View All</a>
+</div>
+<div class="flex snap-x snap-mandatory scroll-p-4 gap-4 overflow-x-auto pb-2 -mx-4 px-4">
+<div class="flex w-48 flex-shrink-0 snap-start flex-col gap-2 rounded-xl bg-white dark:bg-gray-800 p-3 shadow-sm">
+<div class="aspect-video w-full rounded-lg bg-center bg-no-repeat bg-cover" data-alt="Abstract image of office collaboration" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBTG2_0-TxZ8JyoVcnwKe0syNFCqAc6qYJUCJk0zTtzsi41c8UoGNJIC42sQJ4kJXvEnAe0hmGcGQErH1Z5JOCK6GXdUQmok3rUXszPSCb9jvWRJwLAipEaOmd1oCxfepZicyKO9cBvObRxikgNw3qeVttJS86gUe0PJ18e3WpLjM5Xb70YzARLh0RQPPDPnefudyDV8C8cjkyzUdj6UndL71LOP__K6lT2NiP0yuS1hQ08NoFFu19WCuZCdiZhS8-gUNbUKcFDA1E')"></div>
+<p class="font-bold text-sm text-[#2D3748] dark:text-white">Ch. 3: Corporate Ethics</p>
+<span class="text-xs font-medium text-white bg-green-500 px-2 py-0.5 rounded-full self-start">Completed</span>
+</div>
+<div class="flex w-48 flex-shrink-0 snap-start flex-col gap-2 rounded-xl bg-white dark:bg-gray-800 p-3 shadow-sm">
+<div class="aspect-video w-full rounded-lg bg-center bg-no-repeat bg-cover" data-alt="Abstract image of a team planning on a whiteboard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEwkB1yJhrKF7RWBg5o8XMg6roM8sS9Giocp35uMVpryoDO5m25WuCxJ-gXDYf3T7Gl5yHzqhjZl5rgO9BHseuiCzf-ZG8FIN533g2YzWrRtb4rLNzq_KmFKGRR5Yk2WXfkzdqXtKO4zmuu_RggVX5WDaJDUjbJpAWKWCFvDDFUxlMnHFqDbgh5ZMSGTbW571P2OudT2OYyFmSxcnxnPf69TdIeW37A04i769IqzEegvlWC7Z1nZuTgyZB3mZ3Stwx_mIKB8FBl_9J')"></div>
+<p class="font-bold text-sm text-[#2D3748] dark:text-white">Ch. 4: Project Management</p>
+<span class="text-xs font-medium text-gray-700 bg-yellow-300 px-2 py-0.5 rounded-full self-start">In Progress</span>
+</div>
+<div class="flex w-48 flex-shrink-0 snap-start flex-col gap-2 rounded-xl bg-white dark:bg-gray-800 p-3 shadow-sm">
+<div class="aspect-video w-full rounded-lg bg-center bg-no-repeat bg-cover" data-alt="Abstract image of people in a meeting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCr5F4JtBjM3PnMlAzppir8EkM5YId5d3rcwRm-qcahmUU7hbGTdXi9e9SWLkMk5vNmufEhL04xMfLVyf6IFhenvxUbMYFF6gYsMSM-hgxqY4WW90htQE67o_zESYpR5Ho4qVH-G0oVQ_fsTjZCps5AD-68v0vIGH7mA1I3nlSxlLZpGlV7ZKAd4X31nauWlO6kVDkyLTZXbs2wNoxN2xI-wKijOP9BdVy7o8Zmlv6EOGZ6juqwl91XXy0mVJ_segVdgMLCjmifbVah')"></div>
+<p class="font-bold text-sm text-[#2D3748] dark:text-white">Ch. 5: Effective Communication</p>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-600 px-2 py-0.5 rounded-full self-start">Not Started</span>
+</div>
+</div>
+</div>
+<!-- Your Badges -->
+<div>
+<h3 class="text-lg font-bold text-[#2D3748] dark:text-white px-1 pb-3">Your Badges</h3>
+<div class="flex flex-col items-center justify-center rounded-xl bg-white dark:bg-gray-800 p-6 text-center shadow-sm">
+<div class="flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 h-16 w-16 mb-4">
+<span class="material-symbols-outlined text-4xl text-primary">workspace_premium</span>
+</div>
+<p class="font-semibold text-[#2D3748] dark:text-white">No Badges Yet</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Badges earned in class activities will appear here. Keep learning!</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-10 border-t border-gray-200/80 bg-background-light/80 dark:border-gray-700/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="mx-auto flex max-w-md justify-around py-2">
+<a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-xs font-bold">Journey</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-xs">Resume</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-xs">Mentorship</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-xs">Leaderboard</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

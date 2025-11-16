@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Learning Journey - Nunukkam</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007AFF",
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#171121",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#212529",
+                        "text-primary-light": "#212529",
+                        "text-primary-dark": "#F8F9FA",
+                        "text-secondary-light": "#6C757D",
+                        "text-secondary-dark": "#CED4DA",
+                        "success": "#28A745",
+                        "locked": "#CED4DA",
+                        "attention": "#FFC107"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-24">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex flex-col bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm pt-4">
+<div class="flex items-center px-4 pb-2 justify-between">
+<button class="text-text-primary-light dark:text-text-primary-dark flex size-10 shrink-0 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Data Analytics</h1>
+<div class="size-10 shrink-0"></div> <!-- Spacer -->
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2 px-4 pb-4">
+<div class="flex justify-between">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-xs font-medium">Progress</p>
+<p class="text-text-primary-light dark:text-text-primary-dark text-xs font-semibold">7/15 Completed</p>
+</div>
+<div class="w-full rounded-full bg-gray-200 dark:bg-gray-700 h-2">
+<div class="h-2 rounded-full bg-primary" style="width: 47%;"></div>
+</div>
+</div>
+<hr class="border-gray-200 dark:border-gray-700"/>
+</div>
+<!-- Main Content: Modules -->
+<main class="flex flex-col gap-4 p-4">
+<!-- Module 1: Expanded -->
+<details class="flex flex-col rounded-xl bg-card-light dark:bg-card-dark shadow-sm group" open="">
+<summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-4">
+<div class="flex flex-col">
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-base font-semibold leading-normal">Module 1: Introduction to SQL</h2>
+<div class="flex items-center gap-3 text-text-secondary-light dark:text-text-secondary-dark text-xs mt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">description</span>
+<span>3 Chapters</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">task_alt</span>
+<span>2 Assessments</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4">
+<div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+<!-- Linear flow list -->
+<div class="relative flex flex-col gap-2 pl-8">
+<!-- Vertical line -->
+<div class="absolute left-[15px] top-4 h-[calc(100%-2rem)] w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+<!-- Item 1: Completed -->
+<div class="flex items-center gap-4 min-h-[56px] py-2 opacity-60">
+<div class="absolute left-0 flex size-8 shrink-0 items-center justify-center rounded-full bg-success text-white">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<div class="flex flex-grow flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal line-clamp-1">Pre-Knowledge Check</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-xs font-normal leading-normal">Assessment</p>
+</div>
+</div>
+<!-- Item 2: Active -->
+<div class="flex items-center gap-4 min-h-[56px] py-2">
+<div class="absolute left-0 flex size-8 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-primary/10 text-primary">
+<span class="text-sm font-bold">2</span>
+</div>
+<div class="flex flex-grow flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal line-clamp-1">Notes: SQL Basics</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-xs font-normal leading-normal">Reading Material</p>
+</div>
+<div class="shrink-0">
+<button class="flex h-8 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-white text-xs font-medium leading-normal">
+<span>View Notes</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Locked -->
+<div class="flex items-center gap-4 min-h-[56px] py-2 opacity-50">
+<div class="absolute left-0 flex size-8 shrink-0 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-600 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined text-lg">lock</span>
+</div>
+<div class="flex flex-grow flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal line-clamp-1">Post-Knowledge Check</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-xs font-normal leading-normal">Assessment</p>
+</div>
+<div class="shrink-0">
+<button class="flex h-8 cursor-not-allowed items-center justify-center overflow-hidden rounded-lg bg-locked px-4 text-text-secondary-light dark:text-text-secondary-dark/50 text-xs font-medium leading-normal" disabled="">
+<span>Take Test</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+<!-- Module 2: Collapsed -->
+<details class="flex flex-col rounded-xl bg-card-light dark:bg-card-dark shadow-sm group">
+<summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-4">
+<div class="flex flex-col">
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-base font-semibold leading-normal">Module 2: Advanced SQL Queries</h2>
+<div class="flex items-center gap-3 text-text-secondary-light dark:text-text-secondary-dark text-xs mt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">description</span>
+<span>5 Chapters</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">task_alt</span>
+<span>3 Assessments</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal pt-2 border-t border-gray-200 dark:border-gray-700">A list of learning items for this module will be displayed here.</p>
+</div>
+</details>
+<!-- Module 3: Collapsed -->
+<details class="flex flex-col rounded-xl bg-card-light dark:bg-card-dark shadow-sm group">
+<summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-4">
+<div class="flex flex-col">
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-base font-semibold leading-normal">Module 3: Data Visualization</h2>
+<div class="flex items-center gap-3 text-text-secondary-light dark:text-text-secondary-dark text-xs mt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">description</span>
+<span>4 Chapters</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">task_alt</span>
+<span>2 Assessments</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal pt-2 border-t border-gray-200 dark:border-gray-700">A list of learning items for this module will be displayed here.</p>
+</div>
+</details>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-10 mx-auto max-w-md border-t border-gray-200 dark:border-gray-700 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex h-16 items-center justify-around px-2">
+<a class="flex flex-col items-center justify-center text-text-secondary-light dark:text-text-secondary-dark w-16 text-center" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-xs mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary w-24 text-center" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="absolute -top-1 -right-1.5 h-2 w-2 rounded-full bg-primary"></span>
+</div>
+<span class="text-xs font-bold mt-1">Journey</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary-light dark:text-text-secondary-dark w-16 text-center" href="#">
+<span class="material-symbols-outlined text-2xl">resume</span>
+<span class="text-xs mt-1">Resume</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary-light dark:text-text-secondary-dark w-16 text-center" href="#">
+<span class="material-symbols-outlined text-2xl">group</span>
+<span class="text-xs mt-1">Mentors</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary-light dark:text-text-secondary-dark w-16 text-center" href="#">
+<span class="material-symbols-outlined text-2xl">leaderboard</span>
+<span class="text-xs mt-1">Ranks</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nunukkam - Book a Mentor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7c3bed",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#171121",
+                        "success": "#4CAF50",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<!-- Container for all three screens -->
+<div class="w-full max-w-md mx-auto">
+<!-- Screen 1: Select Mentor -->
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden" id="screen1">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex flex-col bg-background-light dark:bg-background-dark">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-[#131118] dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-[#131118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Select a Mentor</h2>
+<div class="size-12 shrink-0"></div>
+</div>
+<!-- Progress Indicator -->
+<div class="px-4 pt-2 pb-4">
+<div class="flex items-center gap-4">
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-primary"></div>
+<p class="text-xs font-medium text-primary">Mentor</p>
+</div>
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+<p class="text-xs font-medium text-gray-400 dark:text-gray-500">Date &amp; Time</p>
+</div>
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+<p class="text-xs font-medium text-gray-400 dark:text-gray-500">Confirm</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Mentor List -->
+<div class="flex flex-col gap-2 px-4 pb-28 flex-grow">
+<!-- Mentor Item 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark dark:border dark:border-gray-700 p-4 rounded-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Dr. Evelyn Reed" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4qyzAHlkHjDujgOJ--ERNUesfikNLaNtUlFNocAzHbce3kvF-1Niv0vFgRWrha4SU8YyR122LvrwaOXp9q0H1KrO7A_qWVR4Gzf-WJfn4xODEhFi_a5Kfp6b3szNnVu6cdIX5mvGyWr60j79BBiiv7t2Z9gLJLqG1MqSrq-B0FWxhRuBzJMHXBAEcm9CpkWIxB8QtINcAUcZ5vlEmQMpE7ALX4LSB_2BxaHoAgH34PYNBtSY0tfMRy-sDvPxcn21S-haI8rybV0my");'></div>
+<div class="flex flex-col justify-center flex-grow">
+<p class="text-[#131118] dark:text-white text-base font-medium leading-normal line-clamp-1">Dr. Evelyn Reed</p>
+<p class="text-[#706189] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Career Coaching</p>
+</div>
+<div class="shrink-0">
+<input class="form-radio h-5 w-5 text-primary bg-gray-100 border-gray-300 focus:ring-primary dark:focus:ring-offset-background-dark dark:bg-gray-700 dark:border-gray-600" id="mentor1" name="mentor" type="radio"/>
+<label class="sr-only" for="mentor1">Select Dr. Evelyn Reed</label>
+</div>
+</div>
+<!-- Mentor Item 2 (Selected) -->
+<div class="flex items-center gap-4 bg-primary/10 dark:bg-primary/20 p-4 rounded-lg border border-primary">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Marcus Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBce78XvXulHitDKXlXVFyEC6QDmn3LGa3lw-ksSrEXxOanYnKOuRv2dPp54axEVSumtLwpZ79R9Emz5XUs4mockOibuMSu-UByGnuNVSig2eVgowrSbxIspzSUI0ylMTYzd83L-abw1GheZA_j7XMr831W6VR8-3EJtr81Jly_z44nhgyvLhfKagPTccCKNjlF4MDeJRprFD2IzrdqApIcTUoLkjUm6St0PkhghpM1rec-1KHbtAe4PTnZDFHIqWcI3paK7jMyhPwk");'></div>
+<div class="flex flex-col justify-center flex-grow">
+<p class="text-[#131118] dark:text-white text-base font-medium leading-normal line-clamp-1">Marcus Chen</p>
+<p class="text-[#706189] dark:text-gray-300 text-sm font-normal leading-normal line-clamp-2">UX/UI Design</p>
+</div>
+<div class="shrink-0">
+<input checked="" class="form-radio h-5 w-5 text-primary bg-gray-100 border-gray-300 focus:ring-primary dark:focus:ring-offset-background-dark dark:bg-gray-700 dark:border-gray-600" id="mentor2" name="mentor" type="radio"/>
+<label class="sr-only" for="mentor2">Select Marcus Chen</label>
+</div>
+</div>
+<!-- Mentor Item 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark dark:border dark:border-gray-700 p-4 rounded-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Aisha Khan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBswnleoqcvJDKy0dN6PKJyt0LSl9HUQ6cThSbxjjMh3x7VN29-S3UcIJLpo9qydfaKZ-lSm-VCiqHqwT_M8bxOLZ_buHbFWEfCnP0Odxs9p6w7v2Asl3Hkdu0VvYJt-dUgFiTsERd4sR1acxHoNcnQb1kdAtz2G1Ha2oKavSD_ZLf0JlfeypTWKDnBkyogaSPt7osWuSBaw0N_pEwXdEzSImXcap_lAOTfX1ogdLto7a1QtDruauGTYpoz6zaomRpw5GJ9WAe2IFF7");'></div>
+<div class="flex flex-col justify-center flex-grow">
+<p class="text-[#131118] dark:text-white text-base font-medium leading-normal line-clamp-1">Aisha Khan</p>
+<p class="text-[#706189] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Software Engineering</p>
+</div>
+<div class="shrink-0">
+<input class="form-radio h-5 w-5 text-primary bg-gray-100 border-gray-300 focus:ring-primary dark:focus:ring-offset-background-dark dark:bg-gray-700 dark:border-gray-600" id="mentor3" name="mentor" type="radio"/>
+<label class="sr-only" for="mentor3">Select Aisha Khan</label>
+</div>
+</div>
+<!-- Mentor Item 4 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark dark:border dark:border-gray-700 p-4 rounded-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of David Lee" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIX6FB-dLsizL2ZEkXRuPvU_bym5CuXiUjyCB5ZKJnTGGh0M54wrWJS6589H0a4jzhyuR2J1qbqm6xjnCD2fnwGuygkcnwE1uYFkgAzapDu87YPMsJRxNvx9KrT8GRf3UqcKrE363W4FHEqGjF2ek6zxiLvcA28Iar7luXR6fDF_NHC6bN7jxWRpt2-fEyEZnXNobOPF-uJ413ywJfdFmlrhhJ4-9fxD4fVY_C2o0THV2BMRQjv5TsPKPfFLosGsPO6fS6uXcuI1DI");'></div>
+<div class="flex flex-col justify-center flex-grow">
+<p class="text-[#131118] dark:text-white text-base font-medium leading-normal line-clamp-1">David Lee</p>
+<p class="text-[#706189] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Product Management</p>
+</div>
+<div class="shrink-0">
+<input class="form-radio h-5 w-5 text-primary bg-gray-100 border-gray-300 focus:ring-primary dark:focus:ring-offset-background-dark dark:bg-gray-700 dark:border-gray-600" id="mentor4" name="mentor" type="radio"/>
+<label class="sr-only" for="mentor4">Select David Lee</label>
+</div>
+</div>
+</div>
+<!-- Floating CTA Button -->
+<div class="fixed bottom-0 left-0 right-0 w-full max-w-md mx-auto p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<button class="w-full rounded-lg bg-primary py-4 px-5 text-base font-bold text-white shadow-sm transition-colors hover:bg-primary/90">Next</button>
+</div>
+</div>
+<!-- Screen 2: Select Date & Time (Hidden by default) -->
+<div class="relative hidden h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden" id="screen2">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex flex-col bg-background-light dark:bg-background-dark">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-[#131118] dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-[#131118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Select Date &amp; Time</h2>
+<div class="size-12 shrink-0"></div>
+</div>
+<!-- Progress Indicator -->
+<div class="px-4 pt-2 pb-4">
+<div class="flex items-center gap-4">
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-primary/30"></div>
+<p class="text-xs font-medium text-gray-400 dark:text-gray-500">Mentor</p>
+</div>
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-primary"></div>
+<p class="text-xs font-medium text-primary">Date &amp; Time</p>
+</div>
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+<p class="text-xs font-medium text-gray-400 dark:text-gray-500">Confirm</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Calendar -->
+<div class="flex-grow px-4 pb-28">
+<div class="bg-white dark:bg-background-dark dark:border dark:border-gray-700 rounded-xl p-4">
+<div class="flex justify-between items-center mb-4">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[#131118] dark:text-white">chevron_left</span>
+</button>
+<h3 class="font-bold text-base text-[#131118] dark:text-white">November 2024</h3>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[#131118] dark:text-white">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-xs text-gray-500 dark:text-gray-400">
+<div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+</div>
+<div class="grid grid-cols-7 gap-y-3 gap-x-2 mt-2 text-sm">
+<!-- Dates -->
+<div class="text-gray-400 dark:text-gray-600">27</div>
+<div class="text-gray-400 dark:text-gray-600">28</div>
+<div class="text-gray-400 dark:text-gray-600">29</div>
+<div class="text-gray-400 dark:text-gray-600">30</div>
+<div class="text-gray-400 dark:text-gray-600">31</div>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">4</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">5</div>
+<div class="text-gray-400 dark:text-gray-600 p-2">6</div>
+<div class="bg-primary text-white rounded-full p-2 cursor-pointer">7</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">8</div>
+<div>9</div>
+<div>10</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">11</div>
+<div>12</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">13</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">14</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">15</div>
+<div>16</div>
+<div>17</div>
+<div class="text-gray-400 dark:text-gray-600 p-2">18</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">19</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">20</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">21</div>
+<div>22</div>
+<div>23</div>
+<div>24</div>
+<div class="hover:bg-primary/10 rounded-full p-2 cursor-pointer">25</div>
+<div>26</div>
+<div>27</div>
+<div>28</div>
+<div>29</div>
+<div>30</div>
+</div>
+</div>
+<!-- Time Slot Selector -->
+<div class="mt-6">
+<h4 class="font-bold text-base text-[#131118] dark:text-white mb-3">Available Times on Nov 7</h4>
+<div class="grid grid-cols-3 gap-3">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="time" type="radio"/>
+<div class="text-center rounded-lg border border-gray-300 dark:border-gray-600 p-3 text-sm font-medium text-gray-700 dark:text-gray-300 peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">09:00 AM</div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="time" type="radio"/>
+<div class="text-center rounded-lg border border-gray-300 dark:border-gray-600 p-3 text-sm font-medium text-gray-700 dark:text-gray-300 peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">10:30 AM</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="time" type="radio"/>
+<div class="text-center rounded-lg border border-gray-300 dark:border-gray-600 p-3 text-sm font-medium text-gray-700 dark:text-gray-300 peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">11:00 AM</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" disabled="" name="time" type="radio"/>
+<div class="text-center rounded-lg border border-gray-200 dark:border-gray-700 p-3 text-sm font-medium text-gray-400 dark:text-gray-600 bg-gray-50 dark:bg-gray-800 cursor-not-allowed">01:00 PM</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="time" type="radio"/>
+<div class="text-center rounded-lg border border-gray-300 dark:border-gray-600 p-3 text-sm font-medium text-gray-700 dark:text-gray-300 peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">02:30 PM</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="time" type="radio"/>
+<div class="text-center rounded-lg border border-gray-300 dark:border-gray-600 p-3 text-sm font-medium text-gray-700 dark:text-gray-300 peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">04:00 PM</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Floating CTA Button -->
+<div class="fixed bottom-0 left-0 right-0 w-full max-w-md mx-auto p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<button class="w-full rounded-lg bg-primary py-4 px-5 text-base font-bold text-white shadow-sm transition-colors hover:bg-primary/90">Proceed</button>
+</div>
+</div>
+<!-- Screen 3: Confirmation (Hidden by default) -->
+<div class="relative hidden h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden" id="screen3">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex flex-col bg-background-light dark:bg-background-dark">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="size-12 shrink-0"></div>
+<h2 class="text-[#131118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Booking Confirmed!</h2>
+<div class="size-12 shrink-0"></div>
+</div>
+<!-- Progress Indicator -->
+<div class="px-4 pt-2 pb-4">
+<div class="flex items-center gap-4">
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-primary/30"></div>
+<p class="text-xs font-medium text-gray-400 dark:text-gray-500">Mentor</p>
+</div>
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-primary/30"></div>
+<p class="text-xs font-medium text-gray-400 dark:text-gray-500">Date &amp; Time</p>
+</div>
+<div class="flex flex-col gap-1 items-center flex-1">
+<div class="w-full h-1.5 rounded-full bg-primary"></div>
+<p class="text-xs font-medium text-primary">Confirm</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Confirmation Content -->
+<div class="flex flex-col items-center justify-center text-center px-6 flex-grow pb-28">
+<!-- Success Icon -->
+<div class="flex items-center justify-center w-24 h-24 bg-success/20 rounded-full mb-6">
+<span class="material-symbols-outlined text-success !text-6xl">check_circle</span>
+</div>
+<!-- Success Message -->
+<h3 class="text-2xl font-bold text-[#131118] dark:text-white">Session Booked!</h3>
+<p class="mt-2 text-base text-gray-600 dark:text-gray-400">Your mentorship session with Marcus Chen is confirmed.</p>
+<!-- Confirmation Card -->
+<div class="w-full mt-8 bg-white dark:bg-background-dark dark:border dark:border-gray-700 rounded-xl p-5 text-left space-y-4">
+<div class="flex items-center gap-4 pb-4 border-b border-gray-200 dark:border-gray-700">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of Marcus Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfDKgNVL6japndR3bAOfTgoXjnE-kDFmy1QcPBCLHQ85Pi2UgOdpaZAfaHGuhWeDkDqJlJeP44uBKBqBsAXtsoIAFz2ZIdZkHS-Wj9y57CFEHQ1VtRWbmVzQIWE3BvLPomrMfTHg1n7FOcDQ7DkX0nmHygzP0Hym8dKQ5VxBXIAhm32aAqHbm-VHfhBHV2nYkfaTAzHLHsmReVCBgHgrTfkD885c46gb5VhMkw0FfV5PNBAHjoscVubXm9gXoT0AEvEmJLm8lyso9t");'></div>
+<div>
+<p class="text-[#131118] dark:text-white font-medium">Marcus Chen</p>
+<p class="text-[#706189] dark:text-gray-400 text-sm">UX/UI Design</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+</div>
+<div>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Date</p>
+<p class="text-[#131118] dark:text-white font-medium">Thursday, November 7, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Time</p>
+<p class="text-[#131118] dark:text-white font-medium">10:30 AM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating CTA Button -->
+<div class="fixed bottom-0 left-0 right-0 w-full max-w-md mx-auto p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<button class="w-full rounded-lg bg-primary py-4 px-5 text-base font-bold text-white shadow-sm transition-colors hover:bg-primary/90">Go Back to Dashboard</button>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Content - Nunukkam</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7c3bed", // This is a slightly different purple than requested, but I'll use it to follow the theme config.
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#171121",
+                        // Custom status colors based on user request
+                        "status-not-started": "#D1D5DB", // Gray
+                        "status-in-progress": "#8B5CF6", // Purple
+                        "status-completed": "#10B981", // Green
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+           font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 backdrop-blur-sm justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start text-[#1A1A1A] dark:text-white">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-[#1A1A1A] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">All Content</h2>
+<div class="size-12 shrink-0"></div> <!-- Spacer for centering title -->
+</div>
+<!-- Content Grid -->
+<main class="flex-grow p-4">
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1: Completed -->
+<div class="flex flex-col gap-3 rounded-xl border border-status-completed bg-white dark:bg-zinc-800 p-3 shadow-sm">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Abstract illustration for Leadership" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2dHMbssfqLSUmfBZ5x9o_tgAzjR0F1lUiDLrYkcBZ1rM-NRddPP3pQDe5U0dPwUxH5s7jet60-PruguPx6U3gwcKF8wsFaIImcmLlzebqEOwnRgGNPZOe2EXqOvRt1lYCjDyRgTxq0_U1ETG1xWabfW4z6g9FDE8XACN8GaWnEFXEgjX7EJ4kIIO5Wam4uZXpV-LzGcM7nWj1VahxQFXNC-ZfNxsJa3BQkSoagPOqBIFklMgawkuQmcGaHwh6z_1ekUoLcePCYXUW");'></div>
+<div class="flex flex-col gap-2">
+<p class="text-[#1A1A1A] dark:text-white text-base font-semibold leading-normal">Leadership</p>
+<div class="w-full bg-gray-200 dark:bg-zinc-700 rounded-full h-1.5">
+<div class="bg-status-completed h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+<div class="flex items-center justify-between text-xs text-[#6B7280] dark:text-gray-400">
+<span>10/10 modules</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>5h</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: In Progress -->
+<div class="flex flex-col gap-3 rounded-xl border border-status-in-progress bg-white dark:bg-zinc-800 p-3 shadow-sm">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Abstract illustration for Public Speaking" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQV0WMWv8xj8lHMfuQK2wySD-bM0EiwJz4g90oT3fUWDfbuCSJuVHA0XBlWi5OdD5jPiI4BLsAp6TE6myUPf20euqx1Kq3G9zynBVFMfN8TM384aPJ96uJ_64cUZOMts8hV7jmCVcxgnSXk0mAqG2f1lzewR3hWJD9kVc-m2mgdHWk5RRYMUkjIG9HHFvp0QFhskDUoRPlPQQGaoNUOGArUStwNTOetDmVngKHvctB70IErIp3ZTvF9xD1fvLOW8bP1_iLgRPTz2uT");'></div>
+<div class="flex flex-col gap-2">
+<p class="text-[#1A1A1A] dark:text-white text-base font-semibold leading-normal">Public Speaking</p>
+<div class="w-full bg-gray-200 dark:bg-zinc-700 rounded-full h-1.5">
+<div class="bg-status-in-progress h-1.5 rounded-full" style="width: 62.5%"></div>
+</div>
+<div class="flex items-center justify-between text-xs text-[#6B7280] dark:text-gray-400">
+<span>5/8 modules</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>3h</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Not Started (Locked) -->
+<div class="relative flex flex-col gap-3 rounded-xl border border-status-not-started bg-white dark:bg-zinc-800 p-3 shadow-sm">
+<div class="absolute inset-0 bg-white/50 dark:bg-zinc-800/60 rounded-xl z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-gray-400 dark:text-gray-500">lock</span>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Abstract illustration for Project Management" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBO2Bm65LiWGcMDy3wh8vqXXJmiSEhg2FVK3hXnHvy-VDMYX2jopjMqezi_4tZn33bB-dfWpPHcPKNSmFb6hO6SGzlfaPPHK7krBNiUrMrvr2uSL7AyKyvRS8C__X-WJ_Heu8ZEyL6UnoZ7ySJMkuKIHHFFfWJB3x_GLHASIdzPIIHwoCrfBj7hyIPMaXMcmadFezy2Tqpv_xwIRlz4eX0Mozz9GcpWf6SwOCFImhl1MrZ_BxLh01tArvOwi5HJNtsZBQuH4-BB96yE");'></div>
+<div class="flex flex-col gap-2">
+<p class="text-[#1A1A1A] dark:text-white text-base font-semibold leading-normal">Project Management</p>
+<div class="w-full bg-gray-200 dark:bg-zinc-700 rounded-full h-1.5">
+<div class="bg-status-not-started h-1.5 rounded-full" style="width: 0%"></div>
+</div>
+<div class="flex items-center justify-between text-xs text-[#6B7280] dark:text-gray-400">
+<span>0/12 modules</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>6h</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Not Started (Unlocked) -->
+<div class="flex flex-col gap-3 rounded-xl border border-status-not-started bg-white dark:bg-zinc-800 p-3 shadow-sm">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Abstract illustration for Critical Thinking" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtR6gT5KsUgNHdnW8WuO2PKSGbrbpdFldoNWe2Zppj_Jw0JEQJfguGvI1Yyji3rHNXidfWYhPI4X99WCTi_NLc7qPnePIFdKVM_MmSbAip_NesiMUGGk-J3Weg1EeM5Opgy1y6FL6IqepJT5Co7avyUA71_z7qDIIy4OZG95dvUoGWLqNRz0_4mxNVjcnXCGihhH02uT2zmD_CnN_0_Rys-tfUzqkE9hmNBtSah4x4WtCrjip4Vls-7wGKMxSl3osvt8vWJCZCRNcD");'></div>
+<div class="flex flex-col gap-2">
+<p class="text-[#1A1A1A] dark:text-white text-base font-semibold leading-normal">Critical Thinking</p>
+<div class="w-full bg-gray-200 dark:bg-zinc-700 rounded-full h-1.5">
+<div class="bg-status-not-started h-1.5 rounded-full" style="width: 0%"></div>
+</div>
+<div class="flex items-center justify-between text-xs text-[#6B7280] dark:text-gray-400">
+<span>0/7 modules</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>4h 30m</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5: In Progress -->
+<div class="flex flex-col gap-3 rounded-xl border border-status-in-progress bg-white dark:bg-zinc-800 p-3 shadow-sm">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Abstract illustration for Data Analysis" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSP0ijOOnThs6eQl24Qwlf2MvjRI_iIZH_yK_-43LqA7tP52pjQf0vkFRxTarM7edm-Nybx_XMu9KT3KKgsGqtk1qW3ITMFttIEYSvmnh-JttScWPryZq-Ci3GxUadqTO_YmCtJ_zgF-pmm1B2BuN2aMqQRtSSQuE1yVrBYxHVRbGLRnJKzDPiMU27II1tr_vZBajHnsQ64q6fga9kSkd3p0dCEa34omuu_aHBvRIp7pgcP-CTuevXUn2cCM6aIFxH-H_aGrEPCu4D");'></div>
+<div class="flex flex-col gap-2">
+<p class="text-[#1A1A1A] dark:text-white text-base font-semibold leading-normal">Data Analysis</p>
+<div class="w-full bg-gray-200 dark:bg-zinc-700 rounded-full h-1.5">
+<div class="bg-status-in-progress h-1.5 rounded-full" style="width: 22%"></div>
+</div>
+<div class="flex items-center justify-between text-xs text-[#6B7280] dark:text-gray-400">
+<span>2/9 modules</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>7h</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6: Not Started (Locked) -->
+<div class="relative flex flex-col gap-3 rounded-xl border border-status-not-started bg-white dark:bg-zinc-800 p-3 shadow-sm">
+<div class="absolute inset-0 bg-white/50 dark:bg-zinc-800/60 rounded-xl z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-gray-400 dark:text-gray-500">lock</span>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Abstract illustration for Financial Literacy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNfx6ZHpi3iSMMLWK2bRRhtjetRnLo08zLTC7ijyrTNK_fHd888zp72zF7RoqbQQASR2TE81TXpqvsIz7cPkaKJZD0Z_r22QAry6alg_ECUf4HU3Tk0BN574W2j-bWxXFUv_Xe_33vK3O9hRTqki8d956qUmDaXiq4TqOda8AptBn8W4xueDO4oKaT0lzWN-eH3LYpDs4WXI27mYMk0qkiOVnqG9TRs41FntMbD9Aa-_mAabF_AXXMPs2wyNoaFs9W6PLL2rF6xjMr");'></div>
+<div class="flex flex-col gap-2">
+<p class="text-[#1A1A1A] dark:text-white text-base font-semibold leading-normal">Financial Literacy</p>
+<div class="w-full bg-gray-200 dark:bg-zinc-700 rounded-full h-1.5">
+<div class="bg-status-not-started h-1.5 rounded-full" style="width: 0%"></div>
+</div>
+<div class="flex items-center justify-between text-xs text-[#6B7280] dark:text-gray-400">
+<span>0/6 modules</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>2h 30m</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Spacer for Bottom Nav Bar -->
+<div class="h-24"></div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-10 mx-auto max-w-md border-t border-gray-200 dark:border-zinc-700 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex justify-around px-2 pb-2 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#6B7280] dark:text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-xs font-medium leading-normal">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined icon-filled text-2xl">explore</span>
+<p class="text-xs font-medium leading-normal">Learning Journey</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#6B7280] dark:text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">work</span>
+<p class="text-xs font-medium leading-normal">Resume</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#6B7280] dark:text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">group</span>
+<p class="text-xs font-medium leading-normal">Mentorship</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#6B7280] dark:text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">leaderboard</span>
+<p class="text-xs font-medium leading-normal">Leaderboard</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

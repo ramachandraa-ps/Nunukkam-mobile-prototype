@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Assessment Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7c3bed",
+              "background-light": "#f7f6f8",
+              "background-dark": "#171121",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative w-full max-w-md mx-auto min-h-screen flex-col group/design-root overflow-x-hidden pb-24">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-gray-800 dark:text-gray-200">arrow_back</span>
+</div>
+<h2 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Assessment: Final Exam</h2>
+<div class="size-12 shrink-0"></div> <!-- Spacer -->
+</div>
+<main class="flex flex-col gap-6 p-4">
+<!-- Score & Progress Circle -->
+<div class="relative flex flex-col items-center justify-center rounded-xl bg-white dark:bg-gray-800 p-6 shadow-sm">
+<div class="absolute inset-0 z-0 opacity-10">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="confetti" patternunits="userSpaceOnUse" width="40">
+<path d="M5 5 l10 10 M25 5 l-10 10 M5 25 l10 -10 M25 25 l-10 -10" stroke="#10B981" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#confetti)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative w-40 h-40">
+<svg class="w-full h-full" viewbox="0 0 100 100">
+<circle class="text-gray-200 dark:text-gray-700" cx="50" cy="50" fill="transparent" r="45" stroke="currentColor" stroke-width="10"></circle>
+<circle class="text-emerald-500" cx="50" cy="50" fill="transparent" r="45" stroke="currentColor" stroke-dasharray="282.6" stroke-dashoffset="42.39" stroke-linecap="round" stroke-width="10" style="transform: rotate(-90deg); transform-origin: 50% 50%;"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-4xl font-bold text-gray-900 dark:text-gray-100">85%</span>
+<span class="text-sm font-medium text-gray-500 dark:text-gray-400">17/20</span>
+</div>
+</div>
+<div class="flex mt-4 h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-emerald-100 dark:bg-emerald-900/50 px-4">
+<p class="text-emerald-600 dark:text-emerald-400 text-sm font-medium leading-normal">Expert</p>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-normal mt-3">Great work! You've mastered this topic.</p>
+</div>
+<!-- Instructor's Feedback Card -->
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-gray-800 shadow-sm p-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Qualitative Assessment</p>
+<p class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-2">Instructor's Feedback</p>
+<p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal">
+                    Excellent application of the core concepts in your video submission. Your explanation of the supply and demand curve was particularly clear and well-articulated. To improve, consider exploring the long-term elasticity effects in more detail.
+                </p>
+</div>
+<!-- Question Breakdown -->
+<div class="rounded-xl bg-white dark:bg-gray-800 shadow-sm p-4">
+<h3 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-3">Question Breakdown</h3>
+<div class="flex flex-col gap-2">
+<details class="flex flex-col rounded-lg bg-gray-50 dark:bg-gray-900/50 px-4 py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500">check_circle</span>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Question 1</p>
+</div>
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal pb-2 border-t border-gray-200 dark:border-gray-700 pt-2">
+<p><span class="font-medium text-gray-700 dark:text-gray-300">Your Answer:</span> Paris</p>
+<p><span class="font-medium text-gray-700 dark:text-gray-300">Correct Answer:</span> Paris</p>
+</div>
+</details>
+<details class="flex flex-col rounded-lg bg-gray-50 dark:bg-gray-900/50 px-4 py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-red-500">cancel</span>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Question 2</p>
+</div>
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal pb-2 border-t border-gray-200 dark:border-gray-700 pt-2">
+<p><span class="font-medium text-gray-700 dark:text-gray-300">Your Answer:</span> Jupiter</p>
+<p><span class="font-medium text-gray-700 dark:text-gray-300">Correct Answer:</span> Mars</p>
+</div>
+</details>
+<details class="flex flex-col rounded-lg bg-gray-50 dark:bg-gray-900/50 px-4 py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500">check_circle</span>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Question 3</p>
+</div>
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal pb-2 border-t border-gray-200 dark:border-gray-700 pt-2">
+<p><span class="font-medium text-gray-700 dark:text-gray-300">Your Answer:</span> Blue Whale</p>
+<p><span class="font-medium text-gray-700 dark:text-gray-300">Correct Answer:</span> Blue Whale</p>
+</div>
+</details>
+</div>
+</div>
+<!-- Rankings Card -->
+<div class="rounded-xl bg-white dark:bg-gray-800 shadow-sm p-4">
+<h3 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] mb-3">Your Rankings</h3>
+<div class="flex justify-around text-center">
+<div>
+<p class="text-2xl font-bold text-gray-800 dark:text-gray-200">#5</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Class Rank</p>
+</div>
+<div>
+<p class="text-2xl font-bold text-gray-800 dark:text-gray-200">#23</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">College Rank</p>
+</div>
+<div>
+<p class="text-2xl font-bold text-gray-800 dark:text-gray-200">#189</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Nunukkam Rank</p>
+</div>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-col gap-3">
+<button class="flex h-12 w-full items-center justify-center gap-x-2 rounded-lg bg-emerald-500 px-6 text-base font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500">
+                    View Certificate
+                </button>
+<button class="flex h-12 w-full items-center justify-center gap-x-2 rounded-lg bg-gray-100 dark:bg-gray-700 px-6 text-base font-semibold text-gray-800 dark:text-gray-200 shadow-sm hover:bg-gray-200 dark:hover:bg-gray-600">
+                    Back to Course
+                </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 w-full max-w-md mx-auto bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+<div class="flex justify-around h-16">
+<a class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary/80" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full text-primary dark:text-primary/90" href="#">
+<span class="material-symbols-outlined">timeline</span>
+<span class="text-xs font-bold">Journey</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary/80" href="#">
+<span class="material-symbols-outlined">play_arrow</span>
+<span class="text-xs">Resume</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary/80" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-xs">Mentorship</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary/80" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-xs">Leaderboard</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

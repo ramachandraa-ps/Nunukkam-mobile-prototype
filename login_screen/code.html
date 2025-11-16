@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nunukkam - Sign In</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7c3bed",
+              "background-light": "#f7f6f8",
+              "background-dark": "#171121",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root overflow-x-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-primary/20 dark:bg-primary/10 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-20%] top-0 h-[500px] w-[500px] rounded-full bg-primary/20 dark:bg-primary/10 blur-[120px]"></div>
+</div>
+<div class="relative z-10 flex w-full max-w-md flex-col items-center">
+<!-- Logo and Welcome Text -->
+<div class="flex flex-col items-center gap-2 text-center mb-8">
+<svg class="h-16 w-16 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<h1 class="text-[#1F2937] dark:text-white tracking-tight text-[32px] font-bold leading-tight pt-2">Welcome to Nunukkam</h1>
+<p class="text-[#6B7280] dark:text-gray-400 text-base font-normal leading-normal">Sign in to continue your learning journey.</p>
+</div>
+<!-- Login Form Card -->
+<div class="w-full rounded-xl bg-white/50 dark:bg-background-dark/50 backdrop-blur-lg p-6 md:p-8 space-y-6 shadow-lg shadow-primary/5">
+<!-- Email Field -->
+<label class="flex flex-col w-full">
+<p class="text-[#1F2937] dark:text-gray-200 text-base font-medium leading-normal pb-2">Email</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-xl text-[#6B7280]">mail</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#1F2937] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary dark:focus:border-primary h-14 placeholder:text-[#6B7280] p-[15px] pl-12 text-base font-normal leading-normal" placeholder="your.email@school.com" type="email" value=""/>
+</div>
+</label>
+<!-- Password Field -->
+<div class="flex flex-col w-full">
+<label class="flex flex-col w-full">
+<p class="text-[#1F2937] dark:text-gray-200 text-base font-medium leading-normal pb-2">Password</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-xl text-[#6B7280]">lock</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#1F2937] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary dark:focus:border-primary h-14 placeholder:text-[#6B7280] p-[15px] pl-12 pr-12 text-base font-normal leading-normal" placeholder="••••••••••" type="password" value=""/>
+<button aria-label="Toggle password visibility" class="absolute right-0 top-0 h-full px-4 text-[#6B7280] hover:text-primary dark:hover:text-primary">
+<span class="material-symbols-outlined" data-icon="Eye">visibility</span>
+</button>
+</div>
+</label>
+<div class="w-full pt-3">
+<a class="text-[#6B7280] hover:text-primary text-sm font-normal leading-normal underline text-right block" href="#">Forgot Password?</a>
+</div>
+</div>
+<!-- Error Message -->
+<div class="flex items-center gap-2 text-red-500 hidden">
+<span class="material-symbols-outlined text-xl" data-icon="alert">error</span>
+<p class="text-sm font-medium">Invalid email or password. Please try again.</p>
+</div>
+<!-- Loading State -->
+<button class="flex items-center justify-center w-full h-14 px-6 bg-primary/70 text-white rounded-lg text-base font-bold leading-normal cursor-not-allowed hidden">
+<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+                Processing...
+            </button>
+<!-- Sign In Button -->
+<button class="flex items-center justify-center w-full h-14 px-6 bg-primary hover:bg-primary/90 text-white rounded-lg text-base font-bold leading-normal transition-colors duration-200">Sign In</button>
+</div>
+</div>
+</div>
+</body></html>

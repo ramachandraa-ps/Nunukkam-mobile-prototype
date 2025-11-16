@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leaderboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7c3bed",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#171121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex h-14 items-center border-b border-zinc-200/80 bg-background-light/80 px-4 backdrop-blur-sm dark:border-zinc-800/80 dark:bg-background-dark/80">
+<button class="flex size-10 items-center justify-center text-zinc-800 dark:text-zinc-200">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-zinc-900 dark:text-zinc-100">Leaderboard</h1>
+<div class="size-10"></div>
+</header>
+<!-- Main Content -->
+<main class="flex-1">
+<!-- Sticky User Card -->
+<div class="sticky top-14 z-10 bg-background-light p-4 pt-6 shadow-sm dark:bg-background-dark">
+<div class="flex items-center gap-4 rounded-xl border border-primary/50 bg-primary/10 p-4 dark:bg-primary/20">
+<img class="h-14 w-14 shrink-0 rounded-full object-cover" data-alt="Profile picture of Elara Vance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXAIae27HiN-2HKIzhUPXxPaHdoie8MzoyAEdI4CNLTtDLdTlqgCMpn5Lki7hRplNFDbkYaOT2CdK0R8asVcb3mbyOh7v8UzThvRrHyHUI6Z6biOHj52oaNBeAP1q_CvrqjvdvmUlVUTSK0YE2Mt5TSYTbU-hhXx8912KOVpALWE_-Yc0byUumdnk9poHL-Won_kfwwGKq0cUsXWRGGnyYk7z7sF58hkCxsxuoRJ50nQQrTfJUBXDApTcCqibABYVsbQfQEWSfPg0x"/>
+<div class="flex-1">
+<p class="text-base font-semibold text-zinc-900 dark:text-zinc-100">You - Elara Vance</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-400">Rank: #24  •  Points: 4,820</p>
+</div>
+<span class="material-symbols-outlined text-2xl text-primary">expand_more</span>
+</div>
+</div>
+<!-- Leaderboard List -->
+<div class="flex flex-col px-4 pb-4">
+<!-- List Item 1 -->
+<div class="flex min-h-[72px] items-center gap-4 border-b border-zinc-200 py-2 dark:border-zinc-800">
+<div class="flex w-8 items-center justify-center text-lg font-semibold text-amber-500">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of Kenji Tanaka" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3qOcd1myQMIFj6momLTBEuUwzi4QsXIFCZLvHMS-giuV4fARUaSoMonJpPScK0WIZguHI2_taA_V9Yziv7_QXxTcLqAITvLdxccbQIpn-Sdmag6bvhanShlsOTfTBy3su0t97A3TEWfHdNWH1dmc9uj1MSZ3Ylqt0OaQ91Ph7c_vSiaSHakZvflfPrBB21fM-Alw51rMY4xXzZnK-K3hneGFvb8ui4WM1WCJ_ic37UD9Jx2DuVt72encuUwh4HOWiTvSVnpAD6o_U"/>
+<div class="flex-1">
+<p class="text-base font-medium text-zinc-900 dark:text-zinc-100">Kenji Tanaka</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Points: 7,500</p>
+</div>
+<button class="flex size-8 items-center justify-center text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined text-2xl">expand_more</span>
+</button>
+</div>
+<!-- List Item 2 -->
+<div class="flex min-h-[72px] items-center gap-4 border-b border-zinc-200 py-2 dark:border-zinc-800">
+<div class="flex w-8 items-center justify-center text-lg font-semibold text-slate-400">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of Sofia Rossi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFqtdoGhNfGPIBLk36TRYYgtJF76NwdjcVCOA3YDnzTX-rPwhcaP9wzEpi-MxfLhF-aW7QCNYAfDf79MgS8Ez4h07uta_CTUfEECg279Y2bBl9r-a2WN5XA9tNTQpn7WbdCHw-Xc4lnK3H3fop6RDbgkcxBZpoeWHolizXSaGUKOLF-7l-psIOHTNu2gNIYi9grnYLEj8ShnfdsafQSuZ0HScrIFsDshZ7XvdjR9X9DZu4Ccn3SIAMXnH4pNCSDXsQeoOga2N_ru82"/>
+<div class="flex-1">
+<p class="text-base font-medium text-zinc-900 dark:text-zinc-100">Sofia Rossi</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Points: 7,450</p>
+</div>
+<button class="flex size-8 items-center justify-center text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined text-2xl">expand_more</span>
+</button>
+</div>
+<!-- List Item 3 -->
+<div class="flex min-h-[72px] items-center gap-4 border-b border-zinc-200 py-2 dark:border-zinc-800">
+<div class="flex w-8 items-center justify-center text-lg font-semibold text-orange-400">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of Liam O'Connell" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4_dEW6wItpxlYizjWJqVfLmjF-WOqb_LIRl4a1bnRtnJszo4yOnuq6chtLdQh0uMLEdWpLze9bwbbbFfLMlvOa4NNudnH8dZl5L4dK8TxO2Lp0hi596z9xIosu_8TVT6i-TtnWm0fQMPCXVxBf8AmVC4SuLOssfnmpOJVyCCJpZBVoa1cqZvAlj3K9hcyIX5blbXN8HYUqIedkhcR86S3n9PyO_ETPTtWclD_lX56-pGosctHyNMEA4ukXXwWW9MCPFVa5oLu3lWw"/>
+<div class="flex-1">
+<p class="text-base font-medium text-zinc-900 dark:text-zinc-100">Liam O'Connell</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Points: 7,380</p>
+</div>
+<button class="flex size-8 items-center justify-center text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined text-2xl">expand_more</span>
+</button>
+</div>
+<!-- List Item 4 -->
+<div class="flex min-h-[72px] items-center gap-4 border-b border-zinc-200 py-2 dark:border-zinc-800">
+<p class="w-8 text-center font-medium text-zinc-500 dark:text-zinc-400">4</p>
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of Aisha Khan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIyPqhKtGR2sseNUOZjAQ8tgv-ObPxq37zDMUOyyKCsoO7HLykONUzcjZNWFvX3RK7DUyRVBk1p1mstzYOT1rwAqMQgIBkgMnqK7-tF3u66OqmHJ7EhbcDQlRyZHVW1qH1ZawKpRpHcyki4TF3w6fgxPQOh12nRANk2D3cHT9zcjkps-qFbyvuO_LWgvseY-TNc8fOrFnoHHwGv3MbzjK_nUB5iM0DqkvrDampQN0QgKj3Kr0hGwFPKEYDL05jezEYdTpXyGgeKeSi"/>
+<div class="flex-1">
+<p class="text-base font-medium text-zinc-900 dark:text-zinc-100">Aisha Khan</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Points: 7,210</p>
+</div>
+<button class="flex size-8 items-center justify-center text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined text-2xl">expand_more</span>
+</button>
+</div>
+<!-- List Item 5 -->
+<div class="flex min-h-[72px] items-center gap-4 border-b border-zinc-200 py-2 dark:border-zinc-800">
+<p class="w-8 text-center font-medium text-zinc-500 dark:text-zinc-400">5</p>
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of Mateo Garcia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB64xrBb9wMGWLIs7fl94rtNChfnQ6v4sDcA-NonnD2LpC76DEm4Q0pDPgKYyRWcj4Wl-POVOrECVJgP90L5CqEt0PyF2E1vBQaU7efRbyy163yvPJcSvxqhyZW7xkoSKTpUiTNA5RuXCBIAcwlAFe5DTt6dk8OEJQgcguxZxJVcdRd07bZvPknESL0p-VQxkdtmKvke4jgaZ3LTaDrnyRaX4kMlqygc4tSJWvVI-Pr6oNaDlVe5Glh5Hf_dQXum-PHdBbIjVeSaSNJ"/>
+<div class="flex-1">
+<p class="text-base font-medium text-zinc-900 dark:text-zinc-100">Mateo Garcia</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Points: 7,150</p>
+</div>
+<button class="flex size-8 items-center justify-center text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined text-2xl">expand_more</span>
+</button>
+</div>
+<!-- List Item 6 -->
+<div class="flex min-h-[72px] items-center gap-4 border-b border-zinc-200 py-2 dark:border-zinc-800">
+<p class="w-8 text-center font-medium text-zinc-500 dark:text-zinc-400">6</p>
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of Chloe Dubois" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZk8a9nJ1JDBS5bi1Ph_VRBU5_-PMP-BVbb_zfyPQd3v_hL-wPrDn8sVe38sTLkGJD6cT1b2n3dvC3g-4BbH-fRQC_MIVEJZMJ8ihAy9eVwOQbODyqPctdo7wY_hFMPSykrBSWG4Z3bATQVVtzPAIK5KcTdMBRyj1IUA72bKYFws3CX3UXG-xo9UUAJqQ2RzKyb9A2uxf89262uWitFi6znfpkL9xUVN8YpsTq1m5-GrV2jgwaXrcTNDvBeY4WlG5-Imh5A-e1IgP-"/>
+<div class="flex-1">
+<p class="text-base font-medium text-zinc-900 dark:text-zinc-100">Chloe Dubois</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Points: 7,090</p>
+</div>
+<button class="flex size-8 items-center justify-center text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined text-2xl">expand_more</span>
+</button>
+</div>
+<!-- ... More list items would be added here ... -->
+<!-- Loading Spinner for Infinite Scroll -->
+<div class="flex h-24 items-center justify-center">
+<div class="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent dark:border-t-transparent"></div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

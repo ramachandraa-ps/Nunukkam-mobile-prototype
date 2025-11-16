@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cancel Session</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7c3bed",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#171121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .radio-custom:checked {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+            background-color: #7c3bed;
+            border-color: #7c3bed;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center text-gray-900 dark:text-gray-100">Cancel Mentorship Session</h2>
+<div class="size-12"></div> <!-- Spacer to balance the title -->
+</div>
+<!-- Booking Details Card -->
+<div class="p-4">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-background-dark/50 p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+<div class="flex flex-col gap-1.5 flex-[2_2_0px]">
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">Topic: Thesis Research Methods</p>
+<p class="text-base font-bold leading-tight text-gray-900 dark:text-gray-100">Session with Dr. Evelyn Reed</p>
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">Tuesday, October 26th at 3:00 PM</p>
+</div>
+<div class="w-16 h-16 bg-center bg-no-repeat bg-cover rounded-full flex-shrink-0" data-alt="Profile picture of Dr. Evelyn Reed" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlF_hQ6LHMdNdxbgwpJxhGtiTurLJh0JRQdb9TM4hBP8nVVC_KTraeCWiUaNW3NMpAAdfEWsznRxsw2wzOZT8y-KdFlhN8fAPEECs7ztjHfckCAzJsrJKHo7td_DU3UB76dHoALLjt1n2L-HE_9OcXTlS-a_xDgdJhAi9M7Tew5eH12TElmkHvmzb28Qezd5hwFXIuFe85IUWicvJFU8ejA61mq6qKdpYOtGQeHGcpmmOtepOESAj00-qQaGX8yyYdb02CYWEkfZku");'></div>
+</div>
+</div>
+<!-- Reason for Cancellation Section -->
+<div>
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4 text-gray-900 dark:text-gray-100">Reason for Cancellation</h3>
+<p class="text-base font-normal leading-normal pb-3 pt-1 px-4 text-gray-600 dark:text-gray-300">Please let us know why you're cancelling.</p>
+<!-- Radio List -->
+<div class="flex flex-col gap-3 p-4">
+<label class="flex items-center gap-4 rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-[15px] has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 dark:has-[:checked]:border-primary">
+<input class="h-5 w-5 appearance-none rounded-full border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent focus:outline-none focus:ring-0 focus:ring-offset-0 radio-custom" name="cancellation_reason" type="radio"/>
+<div class="flex grow flex-col"><p class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-200">Schedule conflict</p></div>
+</label>
+<label class="flex items-center gap-4 rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-[15px] has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 dark:has-[:checked]:border-primary">
+<input class="h-5 w-5 appearance-none rounded-full border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent focus:outline-none focus:ring-0 focus:ring-offset-0 radio-custom" name="cancellation_reason" type="radio"/>
+<div class="flex grow flex-col"><p class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-200">Not feeling well / Illness</p></div>
+</label>
+<label class="flex items-center gap-4 rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-[15px] has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 dark:has-[:checked]:border-primary">
+<input class="h-5 w-5 appearance-none rounded-full border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent focus:outline-none focus:ring-0 focus:ring-offset-0 radio-custom" name="cancellation_reason" type="radio"/>
+<div class="flex grow flex-col"><p class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-200">Personal emergency</p></div>
+</label>
+<label class="flex items-center gap-4 rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-[15px] has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 dark:has-[:checked]:border-primary">
+<input class="h-5 w-5 appearance-none rounded-full border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent focus:outline-none focus:ring-0 focus:ring-offset-0 radio-custom" name="cancellation_reason" type="radio"/>
+<div class="flex grow flex-col"><p class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-200">Need to reschedule</p></div>
+</label>
+<label class="flex items-center gap-4 rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-[15px] has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 dark:has-[:checked]:border-primary">
+<input class="h-5 w-5 appearance-none rounded-full border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent focus:outline-none focus:ring-0 focus:ring-offset-0 radio-custom" name="cancellation_reason" type="radio"/>
+<div class="flex grow flex-col"><p class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-200">Technical issues</p></div>
+</label>
+<label class="flex flex-col items-start gap-4 rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-[15px] has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/20 dark:has-[:checked]:border-primary">
+<div class="flex w-full items-center gap-4">
+<input checked="" class="h-5 w-5 appearance-none rounded-full border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent focus:outline-none focus:ring-0 focus:ring-offset-0 radio-custom" id="other-reason" name="cancellation_reason" type="radio"/>
+<div class="flex grow flex-col"><p class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-200">Other</p></div>
+</div>
+<textarea class="w-full h-24 p-3 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500" placeholder="Please specify..."></textarea>
+</label>
+</div>
+</div>
+<!-- CTA Button Group -->
+<div class="sticky bottom-0 mt-auto p-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800">
+<div class="flex flex-col gap-3">
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-base font-semibold leading-6 text-white transition-all hover:bg-primary/90 active:scale-95">Confirm Cancellation</button>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/10 dark:bg-primary/20 px-5 py-3 text-base font-semibold leading-6 text-primary transition-all hover:bg-primary/20 dark:hover:bg-primary/30 active:scale-95">Keep Session</button>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Settings - Nunukkam</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7c3bed",
+              "background-light": "#f7f6f8",
+              "background-dark": "#171121",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden text-[#18181B] dark:text-white/90">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="flex size-12 shrink-0 items-center justify-start -ml-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[#131118] dark:text-white">arrow_back</span>
+</button>
+</div>
+<h1 class="text-[#131118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Profile Settings</h1>
+<div class="size-12 shrink-0"></div> <!-- Spacer -->
+</header>
+<!-- Main Content -->
+<main class="flex-grow p-4 space-y-6">
+<!-- Profile Header -->
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-4 border-white dark:border-slate-700 shadow-md" data-alt="User profile picture of Alex Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhO-N7XMySiGZUoFJy8zFrk4I5VX6n900JrGitqb6LY1PkaclPLxZuOa-ZxSJYveuCNT3UXsJsSMRN5fhg7ngGswd4PneDo1zmc6Vobm5HqO0ny9w-DJgqK--PCB1eCOFnZ5ha369mj3LnPX0HmZPXZMQcSziAbJj_T3DegWJ0yUgrj2yI-zYdyzzte557Gjx5pg3wKlO4CQdK_XNFaZFgZWpAqzutochQf8DYOTamifgsq6YLZ6MHboAxyXb2dHbEHYUKFbqnl162");'></div>
+<button class="absolute bottom-1 right-1 flex items-center justify-center size-9 bg-primary text-white rounded-full border-2 border-background-light dark:border-background-dark hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-[#131118] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Alex Doe</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal text-center">alex.doe@nunukkam.edu</p>
+</div>
+</div>
+<!-- Section 1: Personal Information -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl shadow-sm p-4 space-y-3">
+<h3 class="text-[#131118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Personal Information</h3>
+<div class="flex flex-col gap-4">
+<label class="flex flex-col w-full">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#131118] dark:text-white bg-slate-100 dark:bg-slate-900 focus:outline-0 focus:ring-2 focus:ring-primary border border-transparent focus:border-primary h-12 placeholder:text-slate-400 p-[15px] text-base font-normal leading-normal" value="Alex Doe"/>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Email</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-700/50 border border-transparent h-12 p-[15px] text-base font-normal leading-normal cursor-not-allowed" readonly="" value="alex.doe@nunukkam.edu"/>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Phone Number</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#131118] dark:text-white bg-slate-100 dark:bg-slate-900 focus:outline-0 focus:ring-2 focus:ring-primary border border-transparent focus:border-primary h-12 placeholder:text-slate-400 p-[15px] text-base font-normal leading-normal" placeholder="Add phone number"/>
+</label>
+</div>
+</section>
+<!-- Section 2: Account Settings -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl shadow-sm p-4 space-y-1">
+<h3 class="text-[#131118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-2">Account Settings</h3>
+<a class="flex items-center p-3 -mx-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">lock</span>
+<span class="flex-1 text-base">Change Password</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<div class="flex items-center p-3 -mx-3 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">notifications</span>
+<span class="flex-1 text-base">Course Updates</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center p-3 -mx-3 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">grade</span>
+<span class="flex-1 text-base">Grade Alerts</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</section>
+<!-- Section 3: App Preferences -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl shadow-sm p-4 space-y-1">
+<h3 class="text-[#131118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-2">App Preferences</h3>
+<div class="flex items-center p-3 -mx-3 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">dark_mode</span>
+<span class="flex-1 text-base">Dark Theme</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center p-3 -mx-3 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">language</span>
+<span class="flex-1 text-base">Language</span>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span>English</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</div>
+</div>
+<div class="pt-2">
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary/90 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span class="truncate">Clear Cache</span>
+</button>
+</div>
+</section>
+<!-- Section 4: Support & Legal -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl shadow-sm p-4 space-y-1">
+<h3 class="text-[#131118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-2">Support &amp; Legal</h3>
+<a class="flex items-center p-3 -mx-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">help_center</span>
+<span class="flex-1 text-base">Help Center</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<a class="flex items-center p-3 -mx-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">gavel</span>
+<span class="flex-1 text-base">Terms of Service</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<a class="flex items-center p-3 -mx-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">privacy_tip</span>
+<span class="flex-1 text-base">Privacy Policy</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<div class="flex items-center p-3 -mx-3 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-4">info</span>
+<span class="flex-1 text-base">About Nunukkam</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm">v1.2.3</span>
+</div>
+</section>
+<!-- Logout Button -->
+<div class="py-4">
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 bg-red-500/10 text-red-600 dark:bg-red-500/20 dark:text-red-400 text-base font-bold leading-normal tracking-[0.015em] hover:bg-red-500/20 dark:hover:bg-red-500/30 transition-colors">
+<span class="material-symbols-outlined mr-2">logout</span>
+<span class="truncate">Logout</span>
+</button>
+</div>
+</main>
+</div>
+</body></html>

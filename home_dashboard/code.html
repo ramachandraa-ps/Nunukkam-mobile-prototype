@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nunukkam - Student Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A90E2",
+                        "accent": "#7E57C2",
+                        "success": "#50C878",
+                        "warning": "#FFA500",
+                        "alert": "#D9534F",
+                        "background-light": "#F5F7FA",
+                        "background-dark": "#121212",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E1E1E",
+                        "text-primary-light": "#333333",
+                        "text-primary-dark": "#E0E0E0",
+                        "text-secondary-light": "#757575",
+                        "text-secondary-dark": "#B0B0B0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden text-text-primary-light dark:text-text-primary-dark">
+<div class="flex flex-col mx-auto w-full max-w-md pb-24">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">auto_stories</span>
+<h1 class="text-xl font-bold leading-tight tracking-[-0.015em]">Nunukkam</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-transparent text-text-primary-light dark:text-text-primary-dark">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center">
+<img class="h-10 w-10 rounded-full object-cover" data-alt="User profile avatar of Anusha" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKxGR219GkYcvOSJMUTnLpNGQ0rnb3YgBqHIOBI-F_1_J2dCLyeOI59V3E7L2vsTCDJzDFhl6469BNK9-8DTW-zngOh_xm9jgSR8BMeNwZaU16NbifGJE62zW3X0BI31A6YrTbQfPHJ8rFYYVrT88jgns1a4eYQOzbY3jvbdiNzDa5_aed78vjNcA8_ufbr_TCH9f49eI13lSgTiCYAsEP5z7HIjhNBCHDgGgj5heZ0ls9m4MoTIT8mKbWPXF0RvvAsL6FEY5hOffU"/>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col gap-6 p-4">
+<!-- Welcome Card -->
+<div class="p-0 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-gradient-to-br from-primary to-accent overflow-hidden">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-6 relative">
+<img class="absolute top-0 right-0 h-full w-auto object-cover opacity-20" data-alt="Abstract background pattern with geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJHZ91KgcXJ9ViYYd1MYYyLKm2P7aGVoQiJJI69NvQ0P9FHCDR7G3HSqPWvcQiKZvKCi_vkbg2iz5OE8q2UiZZKpr2z9jB91o7J3y6aXnKLttndo3kQmsvOQ45dW-2ZEuUbDa1qboHKPr54JOuoxM2lgu-2_YXgiBqWyNJ5K_BWeQgUxYsWTIY5qid7mjLOhejg8L4B5GKpZ-L05x6EXUv8fCsy39nVfVVN3RRHFhKHrTEW84qH4oXMMSSu6GZNBU--28mQkHbD_y2"/>
+<div class="relative z-[1]">
+<p class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Welcome back, Anusha!</p>
+<div class="flex items-end gap-3 justify-between mt-2">
+<p class="text-white/80 text-base font-normal leading-normal">Keep up the great work. Every step you take is a step towards success.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Learning Progress Card -->
+<div class="flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em]">Your Learning Progress</h3>
+<div class="flex flex-col gap-4">
+<!-- Progress Bar: Modules -->
+<div class="flex flex-col gap-2">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-base font-medium leading-normal">Modules</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">8/10</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-slate-700 h-2"><div class="h-2 rounded-full bg-success" style="width: 80%;"></div></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal self-end">80%</p>
+</div>
+<!-- Progress Bar: Chapters -->
+<div class="flex flex-col gap-2">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-base font-medium leading-normal">Chapters</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">30/50</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-slate-700 h-2"><div class="h-2 rounded-full bg-success" style="width: 60%;"></div></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal self-end">60%</p>
+</div>
+<!-- Progress Bar: Assessments -->
+<div class="flex flex-col gap-2">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-base font-medium leading-normal">Assessments</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">4/5</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-slate-700 h-2"><div class="h-2 rounded-full bg-success" style="width: 80%;"></div></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal self-end">80%</p>
+</div>
+</div>
+</div>
+<!-- Attendance Card -->
+<div class="flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em]">Your Attendance</h3>
+<p class="text-2xl font-bold text-success">92%</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex justify-between w-full items-center mb-2 px-2">
+<button class="text-text-secondary-light dark:text-text-secondary-dark"><span class="material-symbols-outlined">chevron_left</span></button>
+<p class="font-semibold">December 2023</p>
+<button class="text-text-secondary-light dark:text-text-secondary-dark"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center w-full">
+<div class="font-medium text-text-secondary-light dark:text-text-secondary-dark text-sm">Su</div>
+<div class="font-medium text-text-secondary-light dark:text-text-secondary-dark text-sm">Mo</div>
+<div class="font-medium text-text-secondary-light dark:text-text-secondary-dark text-sm">Tu</div>
+<div class="font-medium text-text-secondary-light dark:text-text-secondary-dark text-sm">We</div>
+<div class="font-medium text-text-secondary-light dark:text-text-secondary-dark text-sm">Th</div>
+<div class="font-medium text-text-secondary-light dark:text-text-secondary-dark text-sm">Fr</div>
+<div class="font-medium text-text-secondary-light dark:text-text-secondary-dark text-sm">Sa</div>
+<div class="text-slate-400 dark:text-slate-600">26</div>
+<div class="text-slate-400 dark:text-slate-600">27</div>
+<div class="text-slate-400 dark:text-slate-600">28</div>
+<div class="text-slate-400 dark:text-slate-600">29</div>
+<div class="text-slate-400 dark:text-slate-600">30</div>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div class="relative"><div class="absolute h-1.5 w-1.5 rounded-full bg-success top-0 right-2"></div>4</div>
+<div>5</div>
+<div class="relative"><div class="absolute h-1.5 w-1.5 rounded-full bg-alert top-0 right-2"></div>6</div>
+<div class="relative"><div class="absolute h-1.5 w-1.5 rounded-full bg-success top-0 right-2"></div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+<div class="relative"><div class="absolute h-1.5 w-1.5 rounded-full bg-success top-0 right-2"></div>11</div>
+<div class="relative text-white bg-primary rounded-full">12</div>
+<div class="relative"><div class="absolute h-1.5 w-1.5 rounded-full bg-success top-0 right-2"></div>13</div>
+<div class="relative"><div class="absolute h-1.5 w-1.5 rounded-full bg-success top-0 right-2"></div>14</div>
+<div>15</div>
+<div>16</div>
+<div>17</div>
+<div class="relative"><div class="absolute h-1.5 w-1.5 rounded-full bg-success top-0 right-2"></div>18</div>
+<div class="text-slate-400 dark:text-slate-600">19</div>
+<div class="text-slate-400 dark:text-slate-600">20</div>
+<div class="text-slate-400 dark:text-slate-600">21</div>
+<div class="text-slate-400 dark:text-slate-600">22</div>
+<div class="text-slate-400 dark:text-slate-600">23</div>
+<div class="text-slate-400 dark:text-slate-600">24</div>
+</div>
+</div>
+</div>
+<!-- Pending Tasks Card -->
+<div class="flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em]">Pending Tasks</h3>
+<a class="text-sm font-medium text-primary" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="w-1.5 h-10 bg-alert rounded-full"></div>
+<div class="flex-1">
+<p class="font-medium">Quiz 3: Advanced Algebra</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Deadline: Yesterday</p>
+</div>
+<button class="text-sm font-semibold text-white bg-primary px-4 py-2 rounded-full">Retake</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-1.5 h-10 bg-warning rounded-full"></div>
+<div class="flex-1">
+<p class="font-medium">Project Submission</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Deadline: Today</p>
+</div>
+<button class="text-sm font-semibold text-white bg-primary px-4 py-2 rounded-full">Start</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-1.5 h-10 bg-accent rounded-full"></div>
+<div class="flex-1">
+<p class="font-medium">Assignment 5: Physics</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Deadline: Dec 15</p>
+</div>
+<button class="text-sm font-semibold text-white bg-primary px-4 py-2 rounded-full">Resume</button>
+</div>
+</div>
+</div>
+<!-- Updates & Notifications Card -->
+<div class="flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em]">Updates</h3>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-4 p-3 bg-primary/10 rounded-lg">
+<div class="flex items-center justify-center h-10 w-10 rounded-full bg-success/20 text-success">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold">Assessment Results</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Your results for Quiz 2 are now available.</p>
+</div>
+<div class="w-2 h-2 bg-primary rounded-full mt-1"></div>
+</div>
+<div class="flex items-start gap-4 p-3 bg-primary/10 rounded-lg">
+<div class="flex items-center justify-center h-10 w-10 rounded-full bg-accent/20 text-accent">
+<span class="material-symbols-outlined">article</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold">New Article Published</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">A new article on "Quantum Entanglement" has been added.</p>
+</div>
+<div class="w-2 h-2 bg-primary rounded-full mt-1"></div>
+</div>
+<div class="flex items-start gap-4 p-3 rounded-lg">
+<div class="flex items-center justify-center h-10 w-10 rounded-full bg-warning/20 text-warning">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold">System Announcement</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Maintenance scheduled for Dec 20, 2 AM.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-10 bg-card-light dark:bg-card-dark border-t border-slate-200 dark:border-slate-700 max-w-md mx-auto">
+<div class="flex justify-around h-16">
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-icon">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">timeline</span>
+<span class="text-xs">Journey</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">play_arrow</span>
+<span class="text-xs">Resume</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-xs">Mentors</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-xs">Ranks</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

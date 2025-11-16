@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leaderboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7c3bed",
+              "background-light": "#f7f6f8",
+              "background-dark": "#171121",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start text-zinc-900 dark:text-zinc-50">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-zinc-900 dark:text-zinc-50 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Leaderboard</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-zinc-900 dark:text-zinc-50 gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex gap-2 p-4 pt-2">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary pl-4 pr-2 text-white">
+<p class="text-sm font-medium leading-normal">In Class</p>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 dark:bg-zinc-800 pl-4 pr-4 text-zinc-900 dark:text-zinc-50">
+<p class="text-sm font-medium leading-normal">In College</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 dark:bg-zinc-800 pl-4 pr-4 text-zinc-900 dark:text-zinc-50">
+<p class="text-sm font-medium leading-normal">At Nunukkam</p>
+</button>
+</div>
+<!-- User Rank Card -->
+<div class="p-4 pt-2 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-zinc-800 p-4">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover" data-alt="User avatar for Amelia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBAdSybRzsVTwdBlwIxJLd0M3fJOSLT_jiezYQaxjJ7c82Sjj9LZFVqIXLa334NmBokMg0Z5whBWQjCBfb7OECEIGJ4FA5_Sm5wnveiYsHrXOCH90nngVuPZv8Vl_AeHfsqvlz9q16GGOigl2aadVi7c1YrzKtkGiOv7Gg-TtO2fmJGTq9AVg08ONgSeI_klaK98W40py22lNyDEP7Biz76S8I0smMKaNed-fOuH7J0W0iUiP-bG4UotWA7Fn4SfyOGBYDMEXlxWdn"/>
+<div class="flex grow flex-col items-stretch justify-center gap-1">
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal">You</p>
+<p class="text-zinc-900 dark:text-zinc-50 text-lg font-bold leading-tight tracking-[-0.015em]">Your Rank: #12</p>
+<p class="text-zinc-900 dark:text-zinc-50 text-base font-normal leading-normal">Amelia</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">My Stats</span>
+</button>
+</div>
+<div class="mt-4 flex flex-col gap-2">
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-medium">Proficiency Breakdown</p>
+<div class="flex w-full h-2.5 rounded-full overflow-hidden bg-zinc-200 dark:bg-zinc-700">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="w-[60%] bg-green-500" role="progressbar"></div>
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="w-[30%] bg-orange-400" role="progressbar"></div>
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="w-[10%] bg-zinc-400 dark:bg-zinc-500" role="progressbar"></div>
+</div>
+<div class="flex justify-between text-xs font-medium text-zinc-500 dark:text-zinc-400">
+<span class="flex items-center gap-1.5"><span class="block h-2 w-2 rounded-full bg-green-500"></span>Expert</span>
+<span class="flex items-center gap-1.5"><span class="block h-2 w-2 rounded-full bg-orange-400"></span>Intermediate</span>
+<span class="flex items-center gap-1.5"><span class="block h-2 w-2 rounded-full bg-zinc-400 dark:bg-zinc-500"></span>Novice</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Podium -->
+<div class="flex items-end justify-center gap-4 px-4 pt-4">
+<!-- Rank 2 -->
+<div class="flex w-1/3 flex-col items-center gap-2">
+<div class="relative">
+<img class="h-20 w-20 rounded-full object-cover border-4 border-[#C0C0C0]" data-alt="Avatar of Benjamin, ranked 2nd" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCesxCWFCOjQar-0CESvI53ST9_JM5KVDbZMa2mADUnSVZA_EGxYK0qHtEZ4ZJO6JnsldM8WiQ5UMTmULCqIZ1lHzCV8Ejn9VGC2PbVPBKyMY4hFpy4qfq7WjpW-AAxZe3ELTj48WvvvvYAZT6t2Zw4IdNZd_ljCRf827AFzRYY5RcqAQcrekmNbVgaRWKAJ6mhmrvKgV4Tq4ajd7PhldQ9Y7qZnTkittgE3MQ7gIa3yVKLF64-MCdGB3zvEpJ6DgFCaX7eO0yd7K2f"/>
+<div class="absolute -bottom-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-[#C0C0C0] text-lg font-bold text-white">2</div>
+</div>
+<p class="text-zinc-900 dark:text-zinc-50 text-center font-semibold text-sm">Benjamin</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-center text-xs">19,500 pts</p>
+<div class="h-20 w-full rounded-t-lg bg-zinc-300 dark:bg-zinc-700"></div>
+</div>
+<!-- Rank 1 -->
+<div class="flex w-1/3 flex-col items-center gap-2">
+<div class="relative">
+<img class="h-24 w-24 rounded-full object-cover border-4 border-[#FFD700]" data-alt="Avatar of Olivia, ranked 1st" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGEd4iLsT4xHE5Kfqcz9Nq0OJjunKHyTtuETIJ0BbfHuFIiOD7rSjJTkx2Urk_WgwTmCBjJl7EbCoNVnS2J3dbalzMLK3ngMW6gZMkWCETkSpPr3AOL4At-Df-0Y2EtgvLf1cUQhDh_FAagOrnUOSglYGyYKHakgzkpm8C6k0FNSmZC1KrrjdQJpR_21Mx7wgqRO8iTGJhchZw5C4TG8U3Jzp3_4SBKyeduuZWt4OZw0PTfhR8e6Fv42SZOv06pAoNa8P8nJ4EFFn1"/>
+<div class="absolute -bottom-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-[#FFD700] text-lg font-bold text-white">1</div>
+</div>
+<p class="text-zinc-900 dark:text-zinc-50 text-center font-semibold">Olivia</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-center text-xs">21,000 pts</p>
+<div class="h-28 w-full rounded-t-lg bg-primary"></div>
+</div>
+<!-- Rank 3 -->
+<div class="flex w-1/3 flex-col items-center gap-2">
+<div class="relative">
+<img class="h-20 w-20 rounded-full object-cover border-4 border-[#CD7F32]" data-alt="Avatar of Noah, ranked 3rd" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI56ZSJLTUsD21sGBltgotToWUXGi2eyixLqPpjmFdR9v05ksJL0UQ-WrNLaIqyFkIVDVNx7SdZsAnfGmfM1QGJ2Frp-NKK570QIzCJVRPS4X5ogthRNkAUFiLtY1hm_NMMhtdr4NG3YnilEviHaRN4QhOcd1bJTufYoq0l9HSsWO9EQzY5TGmCe-kWWZYTWXOJ5sa4BBulKREoYEJ2SpJ7R6VM3av1mOo_63nImy38AjeL0EktYV2kuOs8RJgYgRLRBHCoD045txW"/>
+<div class="absolute -bottom-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-[#CD7F32] text-lg font-bold text-white">3</div>
+</div>
+<p class="text-zinc-900 dark:text-zinc-50 text-center font-semibold text-sm">Noah</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-center text-xs">18,900 pts</p>
+<div class="h-16 w-full rounded-t-lg bg-zinc-300 dark:bg-zinc-700"></div>
+</div>
+</div>
+<!-- Spacer -->
+<div class="flex-grow"></div>
+<!-- View Full Leaderboard CTA -->
+<div class="sticky bottom-0 bg-background-light dark:bg-background-dark p-4 pt-2">
+<button class="flex min-w-[84px] w-full max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">View Full Leaderboard</span>
+</button>
+</div>
+</div>
+</body></html>
